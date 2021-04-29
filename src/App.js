@@ -1,6 +1,7 @@
 import Layout from "./components/layout/Layout";
 import AllQuotes from "./components/pages/AllQuotes";
 import NewQuote from "./components/pages/NewQuote";
+import NoFound from "./components/pages/NoFound";
 import QuoteDetail from "./components/pages/QuoteDetail";
 
 const { Switch, Route } = require("react-router");
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/newquote">
           <NewQuote />
+        </Route>
+        <Route path="*">
+          <NoFound />
         </Route>
       </Switch>
     </Layout>
