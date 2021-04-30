@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import useHttp from "../hooks/use-http";
 import { addComment } from "../lib/api";
-import LoadingSpinner from "../UI/LoadingSpinner";
 
 import classes from "./NewCommentForm.module.css";
 
@@ -21,17 +20,14 @@ const NewCommentForm = (props) => {
     event.preventDefault();
     const enteredText = commentTextRef.current.value;
 
-    // optional: Could validate here
-
-    // send comment to server
-    sendRequest({ text: enteredText }, props.quoteId);
+    sendRequest({ commentData: { text: enteredText }, quoteId: props.quoteId });
   };
 
   return (
     <form className={classes.form} onSubmit={submitFormHandler}>
       {status === "pending" && (
         <div className="centered">
-          <LoadingSpinner />
+          <p>Loading comment...</p>
         </div>
       )}
       <div className={classes.control} onSubmit={submitFormHandler}>
