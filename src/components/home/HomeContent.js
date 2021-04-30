@@ -4,7 +4,7 @@ const HomeContent = () => {
   return (
     <div className={classes.home}>
       <h1>Welcome to Amazing Quotes!</h1>
-      <p>Please add or check out the quotes</p>
+      <p>Please add or check out all the quotes</p>
     </div>
   );
 };
