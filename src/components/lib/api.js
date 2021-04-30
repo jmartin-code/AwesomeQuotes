@@ -1,5 +1,6 @@
-const FIREBASE_DOMAIN =
-  "https://quotes-6be98-default-rtdb.firebaseio.com/Quotes";
+const { REACT_APP_MY_VAR } = process.env;
+
+const FIREBASE_DOMAIN = REACT_APP_MY_VAR;
 
 export async function getAllQuotes() {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);

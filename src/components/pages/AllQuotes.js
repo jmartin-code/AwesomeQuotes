@@ -1,6 +1,6 @@
 import QuoteList from "../quotes/QuoteList";
 import useHttp from "../hooks/use-http";
-import { getAllQuotes } from "..//lib/api";
+import { getAllQuotes } from "../lib/api";
 import { useEffect } from "react";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import NoQuotesFound from "../quotes/NoQuotesFound";
@@ -25,6 +25,7 @@ const AllQuotes = () => {
   }
 
   if (error) {
+    console.log(error);
     return <p className="centered focused">{error}</p>;
   }
 
