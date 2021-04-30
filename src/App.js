@@ -3,7 +3,7 @@ import Layout from "./components/layout/Layout";
 import Home from "./components/pages/Home";
 import LoadingSpinner from "./components/UI/LoadingSpinner";
 
-const { Switch, Route, Redirect } = require("react-router");
+const { Switch, Route } = require("react-router");
 
 const AllQuotes = React.lazy(() => import("./components/pages/AllQuotes"));
 const NewQuote = React.lazy(() => import("./components/pages/NewQuote"));
